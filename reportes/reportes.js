@@ -1,5 +1,5 @@
 
-const reportarConsulta = async (req,resizeBy,next) =>{
+const reportarConsulta = async (req,res,next) =>{
   const parametros =req.query;
   const url=req.url;
   
