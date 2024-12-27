@@ -17,7 +17,7 @@ app.get('/joyas', reportarConsulta,async (req,res) =>{
   }
 })
 
-app.get('/joyas/filtros',async (req,res)=>{
+app.get('/joyas/filtros', reportarConsulta,async (req,res)=>{
   try {
     const joyas=await filtrosJoyas(req.query)
 
