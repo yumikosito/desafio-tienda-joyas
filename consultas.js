@@ -66,5 +66,4 @@ const prepararHATEOAS = (joyas) => {
     return HATEOAS
   }
 
-
 module.exports={obtenerJoyas, filtrosJoyas,prepararHATEOAS}

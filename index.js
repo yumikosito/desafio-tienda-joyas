@@ -4,10 +4,10 @@ const cors = require('cors')
 
 app.use(cors())
 app.use(express.json())
+const {reportarConsulta} = require('./reportes/reportes');
+const { obtenerJoyas, filtrosJoyas,prepararHATEOAS} = require('./consultas');
 
-const { obtenerJoyas, filtrosJoyas,prepararHATEOAS } = require('./consultas')
-
-app.get('/joyas',async (req,res) =>{
+app.get('/joyas', reportarConsulta,async (req,res) =>{
   try {
     let joyas = await obtenerJoyas(req.query);
     const HATEOAS= await prepararHATEOAS(joyas)
